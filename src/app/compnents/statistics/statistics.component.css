@@ -1,0 +1,88 @@
+
+  .container-login100 {
+    /*
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  */
+  background: #f2f2f2;  
+}
+
+#allDetails{
+  margin-top: 10px;
+}
+
+#GraphOne{
+  width: 600px;
+  margin: 10px;
+}
+
+.cardOne{
+  height: 372px;
+}
+
+#GraphTwo{
+  margin-left: 8px;
+  width: 600px;
+}
+
+.label--desc{
+font-size: 10px;
+color: darkgray;
+}
+
+#filter1{
+padding-top: 10px;
+width: 300px;
+}
+
+#filter2{
+width: 300px;
+}
+
+#hr{
+border-top: 2px solid black;
+}
+
+#AgeCompare{
+padding-top: 10px;
+}
+
+#compareByGendersBtn{
+margin-left: 10px;
+}
+
+#compareByAgesBtn{
+margin-left: 30px;
+}
+
+.wrap-login100 {
+
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px 10px 10px 10px;
+
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+

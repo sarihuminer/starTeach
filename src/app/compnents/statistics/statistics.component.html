@@ -1,0 +1,212 @@
+<!--<p>details works!</p>-->
+
+<div class="container-login100 col-lg-9 col-md-9" id="allDetails" >
+    <div class="row" >
+      <div class="col-lg-8 col-md-8">
+        
+       <div id="GraphOne">
+          <div class="wrap-login100">
+            <div class="cardOne">
+              <div class="card-body ">
+                <!--barChart--><div class="chart-wrapper">
+          <canvas baseChart 
+          [data]="pieChartData" 
+          [labels]="pieChartLabels" 
+          [chartType]="pieChartType"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend">
+        </canvas>
+      </div>       
+                <!-- <canvas id=chartHours width="400" height="100"></canvas>-->
+                <canvas id="barChart" name="barChart"></canvas>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                <!--כאן צריך לרשום מה הגרף מייצג לדוג: סטטיסטיקות על גילאי בתפקיד 1-->
+                <div class="stats" id="lableDescription">
+                  <i class="fa fa-history"></i> this is the bar chart graph
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-4 col-md-4" id="filter1">
+        <!--CompareBtn-->
+        <div id="gendersCompare">
+          <div class="wrap-login100">
+            <div id="filteLable_Btn">
+              <label>To compare the genders:</label>
+              <button type="button" id="compareByGendersBtn" name="compareByGendersBtn"
+                class="btn btn-danger btn-sm">Compare</button>
+            </div>
+            <div class="filter">
+              <div id="filterByDate">
+                <label for="colFormLabelSm" class="col-form-label-sm">Date</label>
+                <div>
+                  <input type="date" id="colFormLabelSm" name="gendersCompareInputDate">
+                </div>
+              </div>
+  
+              <div id="filterByRole">
+                <label for="colFormLabelSm" class="col-form-label-sm">Role</label>
+                <div>
+                  <select name="gendersCompareInputRole">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div id="filterByAgeOfUsers">
+                <label for="colFormLabelSm" class="col-form-label-sm">Age</label>
+                <div>
+                  <select name="gendersCompareInputAge">
+                    <option></option>
+                    <option>20-30</option>
+                    <option>30-40</option>
+                    <option>40-50</option>
+                    <option>50-60</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div id="AgeCompare">
+          <div class="wrap-login100">
+            <div id="filteLable_Btn">
+              <label>To compare the Ages:</label>
+              <button type="button" id="compareByAgesBtn" name="compareByAgesBtn"
+                class="btn btn-danger btn-sm">Compare</button>
+            </div>
+            <div class="filter">
+  
+              <div id="filterByDate">
+                <label for="colFormLabelSm" class="col-form-label-sm">Date</label>
+                <div>
+                  <input type="date" id="colFormLabelSm" name="AgeCompareInputDate">
+                </div>
+              </div>
+  
+              <div id="filterByRole">
+                <label for="colFormLabelSm" class="col-form-label-sm">Role</label>
+                <div>
+                  <select name="AgeCompareInputRole">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div id="filterByGenderOfUsers">
+                <label for="colFormLabelSm" class="col-form-label-sm">Gender(1-male 2-female)</label>
+                <div>
+                  <select name="AgeCompareInputGender">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                  </select>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="space">
+      <div class="card-footer ">
+        <hr id="hr">
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-lg-8 col-md-8">
+        <!--GraphTwo-->
+        <div id="GraphTwo">
+          <div class="wrap-login100">
+            <div class="card-body">
+              <!--Line chart-->
+              <!--<canvas id="speedChart" width="400" height="100"></canvas>-->
+              <canvas id="lineChart"></canvas>
+            </div>
+            <div class="card-footer">
+              <hr />
+              <div class="card-stats">
+                <!--כאן יהיה תיאור של מה שהגרף מציג על פי החודשים-->
+                <i class="fa fa-check"></i> this is the line chart graph
+              </div>
+            </div>
+           
+
+
+          </div>
+        </div>
+      </div>
+     
+      <div class="col-lg-4 col-md-4" id="filter2">
+        <div id="OverallComparison">
+          <div class="wrap-login100">
+            <div id="filteLable">
+              <label>To overall comparison:</label>
+            </div>
+            <div class="filter">
+  
+              <div id="filterByRole">
+                <label for="colFormLabelSm" class="col-form-label-sm">Role</label>
+                <div>
+                  <select name="OverallComparisonInputRole">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div id="filterByGenderOfUsers">
+                <label for="colFormLabelSm" class="col-form-label-sm">For comparison by ages:</label>
+                <div>
+                  <label>Insert gender (1-male 2-female):</label>
+                  <select name="OverallComparisonInputGender">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                  </select>
+                  <button type="button" id="OverallComparisonByAgesBtn" name="OverallComparisonByAgesBtn"
+                    class="btn btn-danger btn-sm">Compare</button>
+                </div>
+              </div>
+  
+              <div id="filterByAgeOfUsers">
+                <label for="colFormLabelSm" class="col-form-label-sm">For comparison by gender:</label>
+                <div>
+                  <label>Insert age group:</label>
+                  <select name="OverallComparisonInputAge">
+                    <option></option>
+                    <option>20-30</option>
+                    <option>30-40</option>
+                    <option>40-50</option>
+                    <option>50-60</option>
+                  </select>
+                  <div id="btn">
+                    <button type="button" id="OverallComparisonByGendersBtn" name="OverallComparisonByGendersBtn"
+                      class="btn btn-danger btn-sm">Compare</button>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
