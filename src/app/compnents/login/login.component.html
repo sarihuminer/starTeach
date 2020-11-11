@@ -14,9 +14,21 @@
 
     <!-- Login Form -->
     <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="מספר זהות">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="סיסמא">
-      <input type="submit" class="fadeIn fourth" value="אישור">
+      <label #login></label>
+      <p *ngIf="user.id==null">ההרשמה צריכה לעבור אישור מנהל</p>
+
+      <input type="text" id="firstName" class="fadeIn third" name="fname" placeholder="שם פרטי" type="text"
+        maxlength="15" [(ngModel)]="user.firstName">
+      <input type="text" [(ngModel)]="user.lastName" id="lastName" class="fadeIn third" name="lname"
+        placeholder="שם משפחה" type="text">
+      <input type="text" id="phone" [(ngModel)]="user.phone" class="fadeIn third" name="phone" placeholder="טלפון"
+        type="tel">
+      <input type="text" id="email" [(ngModel)]="user.email" class="fadeIn third" name="email" placeholder="מייל"
+        type="email">
+      <input type="text" id="id" [(ngModel)]="user.id" class="fadeIn second" name="tz" placeholder="מספר זהות" min="9"
+        max="9" type="text">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="סיסמא" type="password">
+      <input type="submit" class="fadeIn fourth" value="אישור" (click)="savaUser()">
     </form>
 
     <!-- Remind Passowrd -->
@@ -26,4 +38,3 @@
 
   </div>
 </div>
-
