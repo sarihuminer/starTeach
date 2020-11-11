@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { PdfComponent } from './compnents/pdf/pdf.component';
 import { StudentComponent } from './compnents/student/student.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { StudentComponent } from './compnents/student/student.component';
     ExcleimportComponent,
 PdfComponent,
 ExcleimportComponent,
-StudentComponent
+StudentComponent,
+UpdateDetailsComponent
   ],
   imports: [
     AppRoutingModule,

@@ -6,22 +6,28 @@ import { EnteringGradesComponent } from './compnents/entering-grades/entering-gr
 import { LoginComponent } from './compnents/login/login.component';
 import { PdfComponent } from './compnents/pdf/pdf.component';
 import { StatisticsComponent } from './compnents/statistics/statistics.component';
+import { StudentComponent } from './compnents/student/student.component';
 import { UserComponent } from './compnents/user/user.component';
+import { UpdateDetailsComponent } from './update-details/update-details.component';
 
 
-const routes: Routes = [ 
- { path:"", redirectTo: 'login', pathMatch: 'full' },
- { path: 'login', component: LoginComponent},
-{path: 'user', component:UserComponent,
+const routes: Routes = [
+  { path: "", redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'user', component: UserComponent,
 
- children: [
-   {path: 'diploma', component:DiplomaComponent},
-  { path: 'enter', component: EnteringGradesComponent},
-   { path: 'statistics', component: StatisticsComponent},
-   { path: 'pdf', component:PdfComponent }
+    children: [
+      { path: 'diploma', component: DiplomaComponent },
+      { path: 'students', component: StudentComponent },
+      { path: 'updateDetails', component: UpdateDetailsComponent },
+      { path: 'updateDetails/:user/:index', component: UpdateDetailsComponent },
+      { path: 'enter', component: EnteringGradesComponent },
+      { path: 'statistics', component: StatisticsComponent },
+      { path: 'pdf', component: PdfComponent }
 
-  ]
-}
+    ]
+  }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

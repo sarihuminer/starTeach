@@ -6,6 +6,9 @@ import { User } from '../model/user';
   providedIn: 'root'
 })
 export class UserService {
+  getAllStudents(): Promise<User[]> {
+    return Promise.resolve(this.users);
+  }
 
   u: User = { codeMosad: 1, firstName: "dasd", id: "23131", lastName: "asdad" };
 
