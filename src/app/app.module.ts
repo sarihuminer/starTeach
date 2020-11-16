@@ -14,8 +14,13 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { PdfComponent } from './compnents/pdf/pdf.component';
 import { StudentComponent } from './compnents/student/student.component';
+<<<<<<< HEAD
 import { Route } from '@angular/compiler/src/core';
 import { Routes } from '@angular/router';
+=======
+import { UpdateDetailsComponent } from './update-details/update-details.component';
+
+>>>>>>> b502fa67aedc549e2c0e7a35e524c4ff2bb61754
 
 @NgModule({
   declarations: [
@@ -29,7 +34,8 @@ import { Routes } from '@angular/router';
     ExcleimportComponent,
 PdfComponent,
 ExcleimportComponent,
-StudentComponent
+StudentComponent,
+UpdateDetailsComponent
   ],
   imports: [
     AppRoutingModule,

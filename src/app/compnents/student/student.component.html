@@ -1,1 +1,28 @@
-<p>student works!</p>
+<table class="table" dir="rtl">
+    <thead class="thead-dark .table-responsive{-sm|-md|-lg|-xl}">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">תז</th>
+            <th scope="col">שם פרטי</th>
+            <th scope="col">שם משפחה</th>
+            <th scope="col">שם מוסד</th>
+            <th scope="col">פלאפון</th>
+            <th scope="col">מייל</th>
+            <th scope="col">*</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let u of studentList;let i=index">
+            <th scope="row">{{i+1}}</th>
+            <!-- <td *ngFor="let d of sd ">{{d}}</td> -->
+            <td>{{u.id}}</td>
+            <td>{{u.firstName}}</td>
+            <td>{{u.lastName}}</td>
+            <td>{{u.codeMosad}}</td>
+            <td>{{u.phone}}</td>
+            <td>{{u.email}}</td>
+            <button type="button" class="btn btn-info" (click)="update(u,i)">עדכן</button>
+        </tr>
+    </tbody>
+</table>
