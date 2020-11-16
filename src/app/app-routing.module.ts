@@ -12,7 +12,7 @@ import { UserComponent } from './compnents/user/user.component';
 const routes: Routes = [ 
  { path:"", redirectTo: 'login', pathMatch: 'full' },
  { path: 'login', component: LoginComponent},
-{path: 'user', component:UserComponent,
+  {path: 'user', component:UserComponent,
 
  children: [
    {path: 'diploma', component:DiplomaComponent},

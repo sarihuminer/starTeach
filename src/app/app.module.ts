@@ -14,7 +14,8 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { PdfComponent } from './compnents/pdf/pdf.component';
 import { StudentComponent } from './compnents/student/student.component';
-
+import { Route } from '@angular/compiler/src/core';
+import { Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
