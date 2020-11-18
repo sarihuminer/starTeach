@@ -1,17 +1,46 @@
-<form (ngSubmit)="onSubmit()">
+<form [formGroup]="dochSearchForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" [(ngModel)]="user.email" name="email" id="exampleInputEmail1"
+        <label  for="id" name="id">Id</label>
+        <input type="number"  name="id"  formControlName="id"  class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="firstName" name="FirstName">FirstName</label>
+        <input type="text" formControlName="firstName"  formControlName="firstName"  name="firstName" class="form-control" >
+    </div>
+    <div class="form-group">
+        <label for="lastName" name="LastName">LastName</label>
+        <input type="text"   name="lastName" formControlName="lastName" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="codeMosad" name="CodeMosad">Code mosad</label>
+        <input type="number"  name="codeMosad"   formControlName="codeMosad"  class="form-control" id="exampleInputCodeMosad1">
+    </div>
+    <div class="form-group">
+        <label for="phone" name="Phone">Phone</label>
+        <input type="text"   name="phone" formControlName="phone" class="form-control" id="exampleInputPhone1">
+    </div>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" formControlName="email" class="form-control"  name="email" id="exampleInputEmail1"
             aria-describedby="emailHelp">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1" name="password">Password</label>
-        <input type="password" [(ngModel)]="user.password" name="pass" class="form-control" id="exampleInputPassword1">
+        <label for="password" name="password">Password</label>
+        <input type="password" formControlName="password"  name="password" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <input formControlName="codeMosad"  type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
+ 
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<!-- 
+id: string;
+    firstName: string;
+    lastName: string;
+    codeMosad: number;
+    phone?: string;
+    email?: string;
+    password?: string; -->
