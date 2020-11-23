@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpBackend, HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EnteringGradesComponent } from './compnents/entering-grades/entering-grades.component';
@@ -19,9 +19,16 @@ import { Route } from '@angular/compiler/src/core';
 import { Routes } from '@angular/router';
 //=======
 import { UpdateDetailsComponent } from './update-details/update-details.component';
-
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader/src/http-loader';
+import { Http } from '@angular/http';
+//  export function HttpLoaderFactory(http: Http) {
+//    return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
+// }
 //>>>>>>> b502fa67aedc549e2c0e7a35e524c4ff2bb61754
-
+//  export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateHttpLoader {
+//   // return new TranslateHttpLoader(new HttpClient(httpBackend));
+// }
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,9 +51,18 @@ UpdateDetailsComponent
     ChartsModule,
     CommonModule,
     BrowserModule,
-    ReactiveFormsModule 
+  //    TranslateModule.forRoot({
+  //      loader: {
+  //          provide: TranslateLoader,
+  //          deps: [HttpClient],
+  //          useFactory: translateHttpLoaderFactory
+  //      }
+  // }),
+    ReactiveFormsModule ,
+ 
   ],
-  providers: [StudentComponent],
+  providers: [TranslateService],
+  exports:[TranslateModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

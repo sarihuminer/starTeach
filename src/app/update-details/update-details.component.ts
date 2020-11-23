@@ -1,5 +1,6 @@
-import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { variable } from '@angular/compiler/src/output/output_ast';
+import { Component, ElementRef, EventEmitter, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/user';
 import { StudentComponent } from '../compnents/student/student.component';
@@ -16,32 +17,59 @@ export class UpdateDetailsComponent implements OnInit {
   user: User = new User();
   dochSearchForm: FormGroup;
   updateU: string;
-  
-  constructor(private route: ActivatedRoute, private userService:UserService, private fb: FormBuilder,private updateUserService:UpdateUserService, private student:StudentComponent) {
+
+  constructor(private route: ActivatedRoute, private userService: UserService, private fb: FormBuilder, private updateUserService: UpdateUserService
+  ) {
     this.getUserToUpdate();
-   }
+  }
   @Output()
   onSaveChanges: EventEmitter<any> = new EventEmitter<any>();
-  userToUpdate:User;
+  userToUpdate: User;
   ngOnInit(): void {
-   this.updateUserService.updateU.subscribe(res=> this.updateU=res);
+    //$
+    this.dochSearchForm = this.fb.group(this.userToUpdate);//create a object of the row you want to update.
+    this.dochSearchForm.get('id').setValidators([Validators.required,Validators.pattern(/^\d{9,9}?$/)]);
+    this.dochSearchForm.get('id').updateValueAndValidity();
+    this.dochSearchForm.get('firstName').setValidators([Validators.required,Validators.pattern(/^[a-z\u0590-\u05fe]+$/)]);
+    this.dochSearchForm.get('firstName').updateValueAndValidity();
+    this.dochSearchForm.get('lastName').setValidators([Validators.required,Validators.pattern(/^[a-z\u0590-\u05fe]+$/)]);
+    this.dochSearchForm.get('lastName').updateValueAndValidity();
+    this.dochSearchForm.get('codeMosad').setValidators([Validators.required,Validators.pattern(/^\d/)]);
+    this.dochSearchForm.get('codeMosad').updateValueAndValidity();
+    this.dochSearchForm.get('phone').setValidators([Validators.pattern(/^\d{7,10}?$/)]);
+    this.dochSearchForm.get('phone').updateValueAndValidity();
+    this.dochSearchForm.get('email').setValidators([Validators.email]);
+    this.dochSearchForm.get('email').updateValueAndValidity();
+    this.dochSearchForm.get('password').setValidators([Validators.required]);
+    this.dochSearchForm.get('password').updateValueAndValidity();
+    this.InitForm();
   }
   getUserToUpdate() {
-    debugger;
-    const idUser= this.route.params['value'].user;
-    this.userService.getStudentById(idUser).then(user=>{
-      debugger;
+    const idUser = this.route.params['value'].user;
+    this.userService.getStudentById(idUser).then(user => {
       this.userToUpdate = user;
-    this.InitForm();
-    }) ;
+      this.InitForm();
+    });
   }
   onSubmit() {
-    debugger;
-    let updatingUser:User; 
-    updatingUser=this.dochSearchForm.value;
-    this.updateUserService.changeData(updatingUser);
+    debugger
+    if (this.validateForm()) {
+      let updatingUser: User;
+      updatingUser = this.dochSearchForm.value;
+      this.updateUserService.changeData(updatingUser);//move the update object to the update-user-service
+    }
   }
-  InitForm(){ 
-    debugger;
-    this.dochSearchForm = this.fb.group(this.userToUpdate); } 
+  InitForm() {
+    this.updateUserService.updateU.subscribe(res => this.userToUpdate);
+  }
+  // ‏
+  validateForm() {
+    debugger
+    Object.keys(this.dochSearchForm.controls).forEach(field => {
+      debugger
+      const control = this.dochSearchForm.get(field);
+      control.markAsDirty({ onlySelf: true });
+    });
+    return this.dochSearchForm.status === 'VALID';
+  }
 }

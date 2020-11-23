@@ -18,14 +18,11 @@ export class UserComponent implements OnInit, AfterViewInit {
 // https://stackoverflow.com/questions/57878617/pass-data-from-child-to-parent-inside-of-router-outlet
   func: any = null;
   ngOnInit(): void {
-    debugger;
 this.updateUserService.updateU.subscribe(x=>{
-  debugger
-   this.userService.upsateStudent(x);
+   this.userService.upsateStudent(x);//go to the serveice and take the updated object to update
 });
   }
   onActivate(componentRef){
-    debugger
     this.child = componentRef;
   }
   ngAfterViewInit(): void {
