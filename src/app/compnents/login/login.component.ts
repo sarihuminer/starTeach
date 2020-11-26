@@ -26,8 +26,9 @@ export class LoginComponent implements OnInit, AfterViewInit {
     console.log(this.user);
   }
   savaUser() {
-
+debugger
     if (this.user.id != null) {
+
       this.userSErvice.login(this.user).then(res => this.succsesslogin(res)).catch(err => console.log(err));
     }
 

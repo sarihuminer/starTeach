@@ -40,6 +40,7 @@ export class UserService {
     ];
   constructor() { }
   login(u: User): Promise<User> {
+    debugger
     return Promise.resolve(this.users.find(user => user.id == u.id));
 
   }

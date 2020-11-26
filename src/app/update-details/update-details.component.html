@@ -1,31 +1,23 @@
 <form [formGroup]="dochSearchForm" (ngSubmit)="onSubmit()">
-    <!--div class="data-d-col d-flex flex-column" [ngClass]="{ 'field-error': reformaForm.get('heara').enabled && !reformaForm.get('heara').valid && reformaForm.get('heara').dirty }">
-        <label for="heara">{{ 'OHPModule.ReformaFormComponent.hearaLabel' | translate }}</label>
-        <textarea class="edit-comment" id="heara" formControlName="heara" maxlength="500"></textarea>
-  
-        <span class="error-text" *ngIf="reformaForm.get('heara').hasError('maxlength') && reformaForm.get('heara').dirty">maxlength
-          500 characters</span>
-          <span class="error-text" *ngIf="reformaForm.get('heara').hasError('required') && reformaForm.get('heara').dirty">{{
-              'ValidationMsg.required' | translate }}</span>
-          </div-->
-    <div class="form-group">
+    <div class="row">
+        <div class="col-lg-3" style="margin-left: 30%;">
+    <div class="form-group" >
         <label  for="id" name="id">Id</label>
         <input  name="id"  formControlName="id"  class="form-control"   [ngClass]="{ 'field-error': !dochSearchForm.get('id').valid }"/>
         <span class="error-text" *ngIf="dochSearchForm.get('id').hasError('required')">Invalid input</span>
          <span class="error-text" *ngIf="dochSearchForm.get('id').hasError('pattern')">Put must 9 Numbers!</span>  
     </div>
-    <!-- field-error { -->
-<!--  -->
+
     <div class="form-group">
         <label for="firstName" name="FirstName">FirstName</label>
         <input type="text" formControlName="firstName"  formControlName="firstName"  name="firstName" class="form-control" [ngClass]="{ 'field-error': !dochSearchForm.get('firstName').valid }" >
-        <span class="error-text" *ngIf="dochSearchForm.get('firstName').hasError('pattern')"> must letters</span> 
+        <span class="error-text" *ngIf="dochSearchForm.get('firstName').hasError('pattern')"> must hebrew letters</span> 
         <span class="error-text" *ngIf="dochSearchForm.get('firstName').hasError('required')">Invalid input</span>
     </div>
     <div class="form-group">
         <label for="lastName" name="LastName">LastName</label>
         <input type="text"   name="lastName" formControlName="lastName" class="form-control" [ngClass]="{ 'field-error': !dochSearchForm.get('lastName').valid }">
-        <span class="error-text" *ngIf="dochSearchForm.get('lastName').hasError('pattern')"> must letters</span>
+        <span class="error-text" *ngIf="dochSearchForm.get('lastName').hasError('pattern')">  must hebrew letters</span>
         <span class="error-text" *ngIf="dochSearchForm.get('lastName').hasError('required')">Invalid input</span> 
     </div>
     <div class="form-group">
@@ -55,6 +47,7 @@
         <input formControlName="codeMosad"  type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
- 
+</div>
+</div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
