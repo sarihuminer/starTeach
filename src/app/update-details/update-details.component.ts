@@ -38,7 +38,7 @@ export class UpdateDetailsComponent implements OnInit {
     this.dochSearchForm.get('codeMosad').updateValueAndValidity();
     this.dochSearchForm.get('phone').setValidators([Validators.pattern(/^\d{7,10}?$/)]);
     this.dochSearchForm.get('phone').updateValueAndValidity();
-    this.dochSearchForm.get('email').setValidators([Validators.email]);
+    this.dochSearchForm.get('email').setValidators([ Validators.pattern(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)]);
     this.dochSearchForm.get('email').updateValueAndValidity();
     this.dochSearchForm.get('password').setValidators([Validators.required]);
     this.dochSearchForm.get('password').updateValueAndValidity();

@@ -35,7 +35,7 @@
         <label for="email">Email address</label>
         <input type="email" formControlName="email" class="form-control"  name="email" id="exampleInputEmail1"
             aria-describedby="emailHelp" [ngClass]="{ 'field-error': !dochSearchForm.get('email').valid }">
-            <span class="error-text" *ngIf="dochSearchForm.get('email').hasError('email')"> Must valid mail</span>
+            <span class="error-text" *ngIf="dochSearchForm.get('email').hasError('pattern') "> Must valid mail</span>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
