@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="schoolDBModelStoreContainer" CdmEntityContainer="schoolDBEntities">
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="schoolDBModel.Area">
+        <MappingFragment StoreEntitySet="Areas">
+          <ScalarProperty Name="Area_Code" ColumnName="Area_Code" />
+          <ScalarProperty Name="Area_Name" ColumnName="Area_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificates">
+      <EntityTypeMapping TypeName="schoolDBModel.Certificate">
+        <MappingFragment StoreEntitySet="Certificates">
+          <ScalarProperty Name="Certificates_Code" ColumnName="Certificates_Code" />
+          <ScalarProperty Name="Certificate_Issuer_Code" ColumnName="Certificate_Issuer_Code" />
+          <ScalarProperty Name="Mark_Passes_For_Certificates" ColumnName="Mark_Passes_For_Certificates" />
+          <ScalarProperty Name="Certificate_Template" ColumnName="Certificate_Template" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Add_Date" ColumnName="Add_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificates_For_School">
+      <EntityTypeMapping TypeName="schoolDBModel.Certificates_For_School">
+        <MappingFragment StoreEntitySet="Certificates_For_School">
+          <ScalarProperty Name="Serial_Num" ColumnName="Serial_Num" />
+          <ScalarProperty Name="Class_Code" ColumnName="Class_Code" />
+          <ScalarProperty Name="Certificates_Code" ColumnName="Certificates_Code" />
+          <ScalarProperty Name="Code_School" ColumnName="Code_School" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Add_Date" ColumnName="Add_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="schoolDBModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="City_Code" ColumnName="City_Code" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Class_Behaviors">
+      <EntityTypeMapping TypeName="schoolDBModel.Class_Behaviors">
+        <MappingFragment StoreEntitySet="Class_Behaviors">
+          <ScalarProperty Name="Behavior_Code" ColumnName="Behavior_Code" />
+          <ScalarProperty Name="Behavior_Name" ColumnName="Behavior_Name" />
+          <ScalarProperty Name="Percentage_Of_Final_Mark" ColumnName="Percentage_Of_Final_Mark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Class_Behaviors_And_Actions">
+      <EntityTypeMapping TypeName="schoolDBModel.Class_Behaviors_And_Actions">
+        <MappingFragment StoreEntitySet="Class_Behaviors_And_Actions">
+          <ScalarProperty Name="Serial_Num" ColumnName="Serial_Num" />
+          <ScalarProperty Name="Code_School" ColumnName="Code_School" />
+          <ScalarProperty Name="Class_Code" ColumnName="Class_Code" />
+          <ScalarProperty Name="Behavior_Code" ColumnName="Behavior_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="schoolDBModel.Class">
+        <MappingFragment StoreEntitySet="Classes">
+          <ScalarProperty Name="Class_Code" ColumnName="Class_Code" />
+          <ScalarProperty Name="Class1" ColumnName="Class" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Educational_Level">
+      <EntityTypeMapping TypeName="schoolDBModel.Educational_Level">
+        <MappingFragment StoreEntitySet="Educational_Level">
+          <ScalarProperty Name="Educational_Level_Code" ColumnName="Educational_Level_Code" />
+          <ScalarProperty Name="Educational_Level_Name" ColumnName="Educational_Level_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exams_For_Students">
+      <EntityTypeMapping TypeName="schoolDBModel.Exams_For_Students">
+        <MappingFragment StoreEntitySet="Exams_For_Students">
+          <ScalarProperty Name="Serial_Num" ColumnName="Serial_Num" />
+          <ScalarProperty Name="Code_Subjects_For_Classes" ColumnName="Code_Subjects_For_Classes" />
+          <ScalarProperty Name="Tests_Code" ColumnName="Tests_Code" />
+          <ScalarProperty Name="ID_Student" ColumnName="ID_Student" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Add_Date" ColumnName="Add_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grade_Categories_For_School">
+      <EntityTypeMapping TypeName="schoolDBModel.Grade_Categories_For_School">
+        <MappingFragment StoreEntitySet="Grade_Categories_For_School">
+          <ScalarProperty Name="Categorie_Code" ColumnName="Categorie_Code" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="From_Mark" ColumnName="From_Mark" />
+          <ScalarProperty Name="TO_Mark" ColumnName="TO_Mark" />
+          <ScalarProperty Name="Mark_Name" ColumnName="Mark_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Institutions">
+      <EntityTypeMapping TypeName="schoolDBModel.Institution">
+        <MappingFragment StoreEntitySet="Institution">
+          <ScalarProperty Name="Institution_Code" ColumnName="Institution_Code" />
+          <ScalarProperty Name="Institution_Name" ColumnName="Institution_Name" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Add_Date" ColumnName="Add_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schools">
+      <EntityTypeMapping TypeName="schoolDBModel.School">
+        <MappingFragment StoreEntitySet="Schools">
+          <ScalarProperty Name="Code_School" ColumnName="Code_School" />
+          <ScalarProperty Name="Name_School" ColumnName="Name_School" />
+          <ScalarProperty Name="Area_Code" ColumnName="Area_Code" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Add_Date" ColumnName="Add_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Semesters">
+      <EntityTypeMapping TypeName="schoolDBModel.Semester">
+        <MappingFragment StoreEntitySet="Semesters">
+          <ScalarProperty Name="Semester_Code" ColumnName="Semester_Code" />
+          <ScalarProperty Name="Semester_name" ColumnName="Semester_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student_Grade_Score">
+      <EntityTypeMapping TypeName="schoolDBModel.Student_Grade_Score">
+        <MappingFragment StoreEntitySet="Student_Grade_Score">
+          <ScalarProperty Name="Serial_Num" ColumnName="Serial_Num" />
+          <ScalarProperty Name="Code_Subjects_For_Classes" ColumnName="Code_Subjects_For_Classes" />
+          <ScalarProperty Name="ID_Student" ColumnName="ID_Student" />
+          <ScalarProperty Name="Average_Mark" ColumnName="Average_Mark" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Add_Date" ColumnName="Add_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="schoolDBModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="Serial_Num" ColumnName="Serial_Num" />
+          <ScalarProperty Name="ID_Student" ColumnName="ID_Student" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Class_Code" ColumnName="Class_Code" />
+          <ScalarProperty Name="City_Code" ColumnName="City_Code" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Add_Date" ColumnName="Add_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects">
+      <EntityTypeMapping TypeName="schoolDBModel.Subject">
+        <MappingFragment StoreEntitySet="Subjects">
+          <ScalarProperty Name="Subjects_Code" ColumnName="Subjects_Code" />
+          <ScalarProperty Name="Subjects_Name" ColumnName="Subjects_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects_For_Classes">
+      <EntityTypeMapping TypeName="schoolDBModel.Subjects_For_Classes">
+        <MappingFragment StoreEntitySet="Subjects_For_Classes">
+          <ScalarProperty Name="Serial_Num" ColumnName="Serial_Num" />
+          <ScalarProperty Name="Class_Code" ColumnName="Class_Code" />
+          <ScalarProperty Name="ID_Teacher" ColumnName="ID_Teacher" />
+          <ScalarProperty Name="Subjects_Code" ColumnName="Subjects_Code" />
+          <ScalarProperty Name="Semester_Code" ColumnName="Semester_Code" />
+          <ScalarProperty Name="Educational_Level_Code" ColumnName="Educational_Level_Code" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Add_Date" ColumnName="Add_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="schoolDBModel.Teacher">
+        <MappingFragment StoreEntitySet="Teachers">
+          <ScalarProperty Name="ID_Teacher" ColumnName="ID_Teacher" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Add_Date" ColumnName="Add_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers_For_Classes">
+      <EntityTypeMapping TypeName="schoolDBModel.Teachers_For_Classes">
+        <MappingFragment StoreEntitySet="Teachers_For_Classes">
+          <ScalarProperty Name="Serial_Num" ColumnName="Serial_Num" />
+          <ScalarProperty Name="Class_Code" ColumnName="Class_Code" />
+          <ScalarProperty Name="ID_Teacher" ColumnName="ID_Teacher" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tests">
+      <EntityTypeMapping TypeName="schoolDBModel.Test">
+        <MappingFragment StoreEntitySet="Tests">
+          <ScalarProperty Name="Tests_Code" ColumnName="Tests_Code" />
+          <ScalarProperty Name="Tests_Name" ColumnName="Tests_Name" />
+          <ScalarProperty Name="Code_Subjects_For_Classes" ColumnName="Code_Subjects_For_Classes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tests_For_Student">
+      <EntityTypeMapping TypeName="schoolDBModel.Tests_For_Student">
+        <MappingFragment StoreEntitySet="Tests_For_Student">
+          <ScalarProperty Name="Serial_Num" ColumnName="Serial_Num" />
+          <ScalarProperty Name="Code_Subjects_For_Classes" ColumnName="Code_Subjects_For_Classes" />
+          <ScalarProperty Name="Tests_Code" ColumnName="Tests_Code" />
+          <ScalarProperty Name="ID_Student" ColumnName="ID_Student" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Add_Date" ColumnName="Add_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

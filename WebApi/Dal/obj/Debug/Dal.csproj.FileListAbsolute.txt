@@ -1,0 +1,12 @@
+D:\Users\user\Desktop\starTeach\WebApi\Dal\bin\Debug\Dal.dll.config
+D:\Users\user\Desktop\starTeach\WebApi\Dal\bin\Debug\Dal.dll
+D:\Users\user\Desktop\starTeach\WebApi\Dal\bin\Debug\Dal.pdb
+D:\Users\user\Desktop\starTeach\WebApi\Dal\bin\Debug\EntityFramework.dll
+D:\Users\user\Desktop\starTeach\WebApi\Dal\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\user\Desktop\starTeach\WebApi\Dal\bin\Debug\EntityFramework.xml
+D:\Users\user\Desktop\starTeach\WebApi\Dal\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\user\Desktop\starTeach\WebApi\Dal\obj\Debug\Dal.csprojAssemblyReference.cache
+D:\Users\user\Desktop\starTeach\WebApi\Dal\obj\Debug\Dal.csproj.CoreCompileInputs.cache
+D:\Users\user\Desktop\starTeach\WebApi\Dal\obj\Debug\Dal.csproj.CopyComplete
+D:\Users\user\Desktop\starTeach\WebApi\Dal\obj\Debug\Dal.dll
+D:\Users\user\Desktop\starTeach\WebApi\Dal\obj\Debug\Dal.pdb

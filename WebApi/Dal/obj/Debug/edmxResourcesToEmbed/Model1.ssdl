@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="schoolDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Areas">
+    <Key>
+      <PropertyRef Name="Area_Code" />
+    </Key>
+    <Property Name="Area_Code" Type="int" Nullable="false" />
+    <Property Name="Area_Name" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Certificates">
+    <Key>
+      <PropertyRef Name="Certificates_Code" />
+    </Key>
+    <Property Name="Certificates_Code" Type="int" Nullable="false" />
+    <Property Name="Certificate_Issuer_Code" Type="int" />
+    <Property Name="Mark_Passes_For_Certificates" Type="int" Nullable="false" />
+    <Property Name="Certificate_Template" Type="nvarchar" MaxLength="30" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="Add_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Certificates_For_School">
+    <Key>
+      <PropertyRef Name="Serial_Num" />
+    </Key>
+    <Property Name="Serial_Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Class_Code" Type="int" />
+    <Property Name="Certificates_Code" Type="int" />
+    <Property Name="Code_School" Type="int" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="Add_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="City_Code" />
+    </Key>
+    <Property Name="City_Code" Type="int" Nullable="false" />
+    <Property Name="City_Name" Type="char" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Class_Behaviors">
+    <Key>
+      <PropertyRef Name="Behavior_Code" />
+    </Key>
+    <Property Name="Behavior_Code" Type="int" Nullable="false" />
+    <Property Name="Behavior_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Percentage_Of_Final_Mark" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Class_Behaviors_And_Actions">
+    <Key>
+      <PropertyRef Name="Serial_Num" />
+    </Key>
+    <Property Name="Serial_Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code_School" Type="int" />
+    <Property Name="Class_Code" Type="int" />
+    <Property Name="Behavior_Code" Type="int" />
+  </EntityType>
+  <EntityType Name="Classes">
+    <Key>
+      <PropertyRef Name="Class_Code" />
+    </Key>
+    <Property Name="Class_Code" Type="int" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Educational_Level">
+    <Key>
+      <PropertyRef Name="Educational_Level_Code" />
+    </Key>
+    <Property Name="Educational_Level_Code" Type="int" Nullable="false" />
+    <Property Name="Educational_Level_Name" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Exams_For_Students">
+    <Key>
+      <PropertyRef Name="Serial_Num" />
+    </Key>
+    <Property Name="Serial_Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code_Subjects_For_Classes" Type="int" />
+    <Property Name="Tests_Code" Type="int" />
+    <Property Name="ID_Student" Type="int" />
+    <Property Name="Mark" Type="int" Nullable="false" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="Add_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grade_Categories_For_School">
+    <Key>
+      <PropertyRef Name="Categorie_Code" />
+    </Key>
+    <Property Name="Categorie_Code" Type="int" Nullable="false" />
+    <Property Name="Mark" Type="int" Nullable="false" />
+    <Property Name="From_Mark" Type="int" Nullable="false" />
+    <Property Name="TO_Mark" Type="int" Nullable="false" />
+    <Property Name="Mark_Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Institution">
+    <Key>
+      <PropertyRef Name="Institution_Code" />
+    </Key>
+    <Property Name="Institution_Code" Type="int" Nullable="false" />
+    <Property Name="Institution_Name" Type="nvarchar" MaxLength="25" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="25" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="Add_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Schools">
+    <Key>
+      <PropertyRef Name="Code_School" />
+    </Key>
+    <Property Name="Code_School" Type="int" Nullable="false" />
+    <Property Name="Name_School" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Area_Code" Type="int" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="Add_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Semesters">
+    <Key>
+      <PropertyRef Name="Semester_Code" />
+    </Key>
+    <Property Name="Semester_Code" Type="int" Nullable="false" />
+    <Property Name="Semester_name" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Student_Grade_Score">
+    <Key>
+      <PropertyRef Name="Serial_Num" />
+    </Key>
+    <Property Name="Serial_Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code_Subjects_For_Classes" Type="int" />
+    <Property Name="ID_Student" Type="int" />
+    <Property Name="Average_Mark" Type="int" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="Add_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="Serial_Num" />
+    </Key>
+    <Property Name="Serial_Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_Student" Type="int" Nullable="false" />
+    <Property Name="First_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="25" />
+    <Property Name="Password" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Class_Code" Type="int" />
+    <Property Name="City_Code" Type="int" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="Add_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subjects">
+    <Key>
+      <PropertyRef Name="Subjects_Code" />
+    </Key>
+    <Property Name="Subjects_Code" Type="int" Nullable="false" />
+    <Property Name="Subjects_Name" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Subjects_For_Classes">
+    <Key>
+      <PropertyRef Name="Serial_Num" />
+    </Key>
+    <Property Name="Serial_Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Class_Code" Type="int" />
+    <Property Name="ID_Teacher" Type="int" />
+    <Property Name="Subjects_Code" Type="int" />
+    <Property Name="Semester_Code" Type="int" />
+    <Property Name="Educational_Level_Code" Type="int" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="Add_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teachers">
+    <Key>
+      <PropertyRef Name="ID_Teacher" />
+    </Key>
+    <Property Name="ID_Teacher" Type="int" Nullable="false" />
+    <Property Name="First_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="25" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="Add_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teachers_For_Classes">
+    <Key>
+      <PropertyRef Name="Serial_Num" />
+    </Key>
+    <Property Name="Serial_Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Class_Code" Type="int" />
+    <Property Name="ID_Teacher" Type="int" />
+  </EntityType>
+  <EntityType Name="Tests">
+    <Key>
+      <PropertyRef Name="Tests_Code" />
+    </Key>
+    <Property Name="Tests_Code" Type="int" Nullable="false" />
+    <Property Name="Tests_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Code_Subjects_For_Classes" Type="int" />
+  </EntityType>
+  <EntityType Name="Tests_For_Student">
+    <Key>
+      <PropertyRef Name="Serial_Num" />
+    </Key>
+    <Property Name="Serial_Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code_Subjects_For_Classes" Type="int" />
+    <Property Name="Tests_Code" Type="int" />
+    <Property Name="ID_Student" Type="int" />
+    <Property Name="Mark" Type="int" Nullable="false" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="Add_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Certifica__Certi__59FA5E80">
+    <End Role="Institution" Type="Self.Institution" Multiplicity="0..1" />
+    <End Role="Certificates" Type="Self.Certificates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="Institution_Code" />
+      </Principal>
+      <Dependent Role="Certificates">
+        <PropertyRef Name="Certificate_Issuer_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Certifica__Certi__5DCAEF64">
+    <End Role="Certificates" Type="Self.Certificates" Multiplicity="0..1" />
+    <End Role="Certificates_For_School" Type="Self.Certificates_For_School" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Certificates">
+        <PropertyRef Name="Certificates_Code" />
+      </Principal>
+      <Dependent Role="Certificates_For_School">
+        <PropertyRef Name="Certificates_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Certifica__Class__5CD6CB2B">
+    <End Role="Classes" Type="Self.Classes" Multiplicity="0..1" />
+    <End Role="Certificates_For_School" Type="Self.Certificates_For_School" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classes">
+        <PropertyRef Name="Class_Code" />
+      </Principal>
+      <Dependent Role="Certificates_For_School">
+        <PropertyRef Name="Class_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Certifica__Code___5EBF139D">
+    <End Role="Schools" Type="Self.Schools" Multiplicity="0..1" />
+    <End Role="Certificates_For_School" Type="Self.Certificates_For_School" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schools">
+        <PropertyRef Name="Code_School" />
+      </Principal>
+      <Dependent Role="Certificates_For_School">
+        <PropertyRef Name="Code_School" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Class_Beh__Behav__6B24EA82">
+    <End Role="Class_Behaviors" Type="Self.Class_Behaviors" Multiplicity="0..1" />
+    <End Role="Class_Behaviors_And_Actions" Type="Self.Class_Behaviors_And_Actions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class_Behaviors">
+        <PropertyRef Name="Behavior_Code" />
+      </Principal>
+      <Dependent Role="Class_Behaviors_And_Actions">
+        <PropertyRef Name="Behavior_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Class_Beh__Class__6A30C649">
+    <End Role="Classes" Type="Self.Classes" Multiplicity="0..1" />
+    <End Role="Class_Behaviors_And_Actions" Type="Self.Class_Behaviors_And_Actions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classes">
+        <PropertyRef Name="Class_Code" />
+      </Principal>
+      <Dependent Role="Class_Behaviors_And_Actions">
+        <PropertyRef Name="Class_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Class_Beh__Code___693CA210">
+    <End Role="Schools" Type="Self.Schools" Multiplicity="0..1" />
+    <End Role="Class_Behaviors_And_Actions" Type="Self.Class_Behaviors_And_Actions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schools">
+        <PropertyRef Name="Code_School" />
+      </Principal>
+      <Dependent Role="Class_Behaviors_And_Actions">
+        <PropertyRef Name="Code_School" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Exams_For__Code___4BAC3F29">
+    <End Role="Subjects_For_Classes" Type="Self.Subjects_For_Classes" Multiplicity="0..1" />
+    <End Role="Exams_For_Students" Type="Self.Exams_For_Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects_For_Classes">
+        <PropertyRef Name="Serial_Num" />
+      </Principal>
+      <Dependent Role="Exams_For_Students">
+        <PropertyRef Name="Code_Subjects_For_Classes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Exams_For__ID_St__4D94879B">
+    <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+    <End Role="Exams_For_Students" Type="Self.Exams_For_Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="Serial_Num" />
+      </Principal>
+      <Dependent Role="Exams_For_Students">
+        <PropertyRef Name="ID_Student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Exams_For__Tests__4CA06362">
+    <End Role="Tests" Type="Self.Tests" Multiplicity="0..1" />
+    <End Role="Exams_For_Students" Type="Self.Exams_For_Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tests">
+        <PropertyRef Name="Tests_Code" />
+      </Principal>
+      <Dependent Role="Exams_For_Students">
+        <PropertyRef Name="Tests_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Schools__Area_Co__5535A963">
+    <End Role="Areas" Type="Self.Areas" Multiplicity="0..1" />
+    <End Role="Schools" Type="Self.Schools" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Areas">
+        <PropertyRef Name="Area_Code" />
+      </Principal>
+      <Dependent Role="Schools">
+        <PropertyRef Name="Area_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student_G__Code___619B8048">
+    <End Role="Subjects_For_Classes" Type="Self.Subjects_For_Classes" Multiplicity="0..1" />
+    <End Role="Student_Grade_Score" Type="Self.Student_Grade_Score" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects_For_Classes">
+        <PropertyRef Name="Serial_Num" />
+      </Principal>
+      <Dependent Role="Student_Grade_Score">
+        <PropertyRef Name="Code_Subjects_For_Classes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student_G__ID_St__628FA481">
+    <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+    <End Role="Student_Grade_Score" Type="Self.Student_Grade_Score" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="Serial_Num" />
+      </Principal>
+      <Dependent Role="Student_Grade_Score">
+        <PropertyRef Name="ID_Student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Students__City_C__29572725">
+    <End Role="City" Type="Self.City" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="City_Code" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="City_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Students__Class___286302EC">
+    <End Role="Classes" Type="Self.Classes" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classes">
+        <PropertyRef Name="Class_Code" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="Class_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Subjects___Class__37A5467C">
+    <End Role="Classes" Type="Self.Classes" Multiplicity="0..1" />
+    <End Role="Subjects_For_Classes" Type="Self.Subjects_For_Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classes">
+        <PropertyRef Name="Class_Code" />
+      </Principal>
+      <Dependent Role="Subjects_For_Classes">
+        <PropertyRef Name="Class_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Subjects___Educa__3B75D760">
+    <End Role="Educational_Level" Type="Self.Educational_Level" Multiplicity="0..1" />
+    <End Role="Subjects_For_Classes" Type="Self.Subjects_For_Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Educational_Level">
+        <PropertyRef Name="Educational_Level_Code" />
+      </Principal>
+      <Dependent Role="Subjects_For_Classes">
+        <PropertyRef Name="Educational_Level_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Subjects___ID_Te__38996AB5">
+    <End Role="Teachers" Type="Self.Teachers" Multiplicity="0..1" />
+    <End Role="Subjects_For_Classes" Type="Self.Subjects_For_Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="ID_Teacher" />
+      </Principal>
+      <Dependent Role="Subjects_For_Classes">
+        <PropertyRef Name="ID_Teacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Subjects___Semes__3A81B327">
+    <End Role="Semesters" Type="Self.Semesters" Multiplicity="0..1" />
+    <End Role="Subjects_For_Classes" Type="Self.Subjects_For_Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Semesters">
+        <PropertyRef Name="Semester_Code" />
+      </Principal>
+      <Dependent Role="Subjects_For_Classes">
+        <PropertyRef Name="Semester_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Subjects___Subje__398D8EEE">
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="0..1" />
+    <End Role="Subjects_For_Classes" Type="Self.Subjects_For_Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="Subjects_Code" />
+      </Principal>
+      <Dependent Role="Subjects_For_Classes">
+        <PropertyRef Name="Subjects_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teachers___Class__2E1BDC42">
+    <End Role="Classes" Type="Self.Classes" Multiplicity="0..1" />
+    <End Role="Teachers_For_Classes" Type="Self.Teachers_For_Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classes">
+        <PropertyRef Name="Class_Code" />
+      </Principal>
+      <Dependent Role="Teachers_For_Classes">
+        <PropertyRef Name="Class_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teachers___ID_Te__2F10007B">
+    <End Role="Teachers" Type="Self.Teachers" Multiplicity="0..1" />
+    <End Role="Teachers_For_Classes" Type="Self.Teachers_For_Classes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="ID_Teacher" />
+      </Principal>
+      <Dependent Role="Teachers_For_Classes">
+        <PropertyRef Name="ID_Teacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tests__Code_Subj__3E52440B">
+    <End Role="Subjects_For_Classes" Type="Self.Subjects_For_Classes" Multiplicity="0..1" />
+    <End Role="Tests" Type="Self.Tests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects_For_Classes">
+        <PropertyRef Name="Serial_Num" />
+      </Principal>
+      <Dependent Role="Tests">
+        <PropertyRef Name="Code_Subjects_For_Classes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tests_For__Code___46E78A0C">
+    <End Role="Subjects_For_Classes" Type="Self.Subjects_For_Classes" Multiplicity="0..1" />
+    <End Role="Tests_For_Student" Type="Self.Tests_For_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects_For_Classes">
+        <PropertyRef Name="Serial_Num" />
+      </Principal>
+      <Dependent Role="Tests_For_Student">
+        <PropertyRef Name="Code_Subjects_For_Classes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tests_For__ID_St__48CFD27E">
+    <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+    <End Role="Tests_For_Student" Type="Self.Tests_For_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="Serial_Num" />
+      </Principal>
+      <Dependent Role="Tests_For_Student">
+        <PropertyRef Name="ID_Student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tests_For__Tests__47DBAE45">
+    <End Role="Tests" Type="Self.Tests" Multiplicity="0..1" />
+    <End Role="Tests_For_Student" Type="Self.Tests_For_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tests">
+        <PropertyRef Name="Tests_Code" />
+      </Principal>
+      <Dependent Role="Tests_For_Student">
+        <PropertyRef Name="Tests_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="schoolDBModelStoreContainer">
+    <EntitySet Name="Areas" EntityType="Self.Areas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certificates" EntityType="Self.Certificates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certificates_For_School" EntityType="Self.Certificates_For_School" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Class_Behaviors" EntityType="Self.Class_Behaviors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Class_Behaviors_And_Actions" EntityType="Self.Class_Behaviors_And_Actions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Classes" EntityType="Self.Classes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Educational_Level" EntityType="Self.Educational_Level" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exams_For_Students" EntityType="Self.Exams_For_Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grade_Categories_For_School" EntityType="Self.Grade_Categories_For_School" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Institution" EntityType="Self.Institution" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Schools" EntityType="Self.Schools" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Semesters" EntityType="Self.Semesters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student_Grade_Score" EntityType="Self.Student_Grade_Score" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subjects" EntityType="Self.Subjects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subjects_For_Classes" EntityType="Self.Subjects_For_Classes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teachers" EntityType="Self.Teachers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teachers_For_Classes" EntityType="Self.Teachers_For_Classes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tests" EntityType="Self.Tests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tests_For_Student" EntityType="Self.Tests_For_Student" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Certifica__Certi__59FA5E80" Association="Self.FK__Certifica__Certi__59FA5E80">
+      <End Role="Institution" EntitySet="Institution" />
+      <End Role="Certificates" EntitySet="Certificates" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Certifica__Certi__5DCAEF64" Association="Self.FK__Certifica__Certi__5DCAEF64">
+      <End Role="Certificates" EntitySet="Certificates" />
+      <End Role="Certificates_For_School" EntitySet="Certificates_For_School" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Certifica__Class__5CD6CB2B" Association="Self.FK__Certifica__Class__5CD6CB2B">
+      <End Role="Classes" EntitySet="Classes" />
+      <End Role="Certificates_For_School" EntitySet="Certificates_For_School" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Certifica__Code___5EBF139D" Association="Self.FK__Certifica__Code___5EBF139D">
+      <End Role="Schools" EntitySet="Schools" />
+      <End Role="Certificates_For_School" EntitySet="Certificates_For_School" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Class_Beh__Behav__6B24EA82" Association="Self.FK__Class_Beh__Behav__6B24EA82">
+      <End Role="Class_Behaviors" EntitySet="Class_Behaviors" />
+      <End Role="Class_Behaviors_And_Actions" EntitySet="Class_Behaviors_And_Actions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Class_Beh__Class__6A30C649" Association="Self.FK__Class_Beh__Class__6A30C649">
+      <End Role="Classes" EntitySet="Classes" />
+      <End Role="Class_Behaviors_And_Actions" EntitySet="Class_Behaviors_And_Actions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Class_Beh__Code___693CA210" Association="Self.FK__Class_Beh__Code___693CA210">
+      <End Role="Schools" EntitySet="Schools" />
+      <End Role="Class_Behaviors_And_Actions" EntitySet="Class_Behaviors_And_Actions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Exams_For__Code___4BAC3F29" Association="Self.FK__Exams_For__Code___4BAC3F29">
+      <End Role="Subjects_For_Classes" EntitySet="Subjects_For_Classes" />
+      <End Role="Exams_For_Students" EntitySet="Exams_For_Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Exams_For__ID_St__4D94879B" Association="Self.FK__Exams_For__ID_St__4D94879B">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Exams_For_Students" EntitySet="Exams_For_Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Exams_For__Tests__4CA06362" Association="Self.FK__Exams_For__Tests__4CA06362">
+      <End Role="Tests" EntitySet="Tests" />
+      <End Role="Exams_For_Students" EntitySet="Exams_For_Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Schools__Area_Co__5535A963" Association="Self.FK__Schools__Area_Co__5535A963">
+      <End Role="Areas" EntitySet="Areas" />
+      <End Role="Schools" EntitySet="Schools" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student_G__Code___619B8048" Association="Self.FK__Student_G__Code___619B8048">
+      <End Role="Subjects_For_Classes" EntitySet="Subjects_For_Classes" />
+      <End Role="Student_Grade_Score" EntitySet="Student_Grade_Score" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student_G__ID_St__628FA481" Association="Self.FK__Student_G__ID_St__628FA481">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Student_Grade_Score" EntitySet="Student_Grade_Score" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Students__City_C__29572725" Association="Self.FK__Students__City_C__29572725">
+      <End Role="City" EntitySet="City" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Students__Class___286302EC" Association="Self.FK__Students__Class___286302EC">
+      <End Role="Classes" EntitySet="Classes" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Subjects___Class__37A5467C" Association="Self.FK__Subjects___Class__37A5467C">
+      <End Role="Classes" EntitySet="Classes" />
+      <End Role="Subjects_For_Classes" EntitySet="Subjects_For_Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Subjects___Educa__3B75D760" Association="Self.FK__Subjects___Educa__3B75D760">
+      <End Role="Educational_Level" EntitySet="Educational_Level" />
+      <End Role="Subjects_For_Classes" EntitySet="Subjects_For_Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Subjects___ID_Te__38996AB5" Association="Self.FK__Subjects___ID_Te__38996AB5">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="Subjects_For_Classes" EntitySet="Subjects_For_Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Subjects___Semes__3A81B327" Association="Self.FK__Subjects___Semes__3A81B327">
+      <End Role="Semesters" EntitySet="Semesters" />
+      <End Role="Subjects_For_Classes" EntitySet="Subjects_For_Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Subjects___Subje__398D8EEE" Association="Self.FK__Subjects___Subje__398D8EEE">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Subjects_For_Classes" EntitySet="Subjects_For_Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teachers___Class__2E1BDC42" Association="Self.FK__Teachers___Class__2E1BDC42">
+      <End Role="Classes" EntitySet="Classes" />
+      <End Role="Teachers_For_Classes" EntitySet="Teachers_For_Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teachers___ID_Te__2F10007B" Association="Self.FK__Teachers___ID_Te__2F10007B">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="Teachers_For_Classes" EntitySet="Teachers_For_Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tests__Code_Subj__3E52440B" Association="Self.FK__Tests__Code_Subj__3E52440B">
+      <End Role="Subjects_For_Classes" EntitySet="Subjects_For_Classes" />
+      <End Role="Tests" EntitySet="Tests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tests_For__Code___46E78A0C" Association="Self.FK__Tests_For__Code___46E78A0C">
+      <End Role="Subjects_For_Classes" EntitySet="Subjects_For_Classes" />
+      <End Role="Tests_For_Student" EntitySet="Tests_For_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tests_For__ID_St__48CFD27E" Association="Self.FK__Tests_For__ID_St__48CFD27E">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Tests_For_Student" EntitySet="Tests_For_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tests_For__Tests__47DBAE45" Association="Self.FK__Tests_For__Tests__47DBAE45">
+      <End Role="Tests" EntitySet="Tests" />
+      <End Role="Tests_For_Student" EntitySet="Tests_For_Student" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

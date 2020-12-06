@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6edb7d204bae4cb3a07a7403ad7b0855" Name="Diagram1">
+        <EntityTypeShape EntityType="schoolDBModel.Area" Width="1.5" PointX="1.5" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Certificate" Width="1.5" PointX="0.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Certificates_For_School" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.City" Width="1.5" PointX="3.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Class_Behaviors" Width="1.5" PointX="3.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Class_Behaviors_And_Actions" Width="1.5" PointX="6" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Class" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Educational_Level" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Exams_For_Students" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Grade_Categories_For_School" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Institution" Width="1.5" PointX="1.5" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.School" Width="1.5" PointX="0.75" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Semester" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Student_Grade_Score" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Student" Width="1.5" PointX="6" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Subject" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Subjects_For_Classes" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Teacher" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Teachers_For_Classes" Width="1.5" PointX="6" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Test" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolDBModel.Tests_For_Student" Width="1.5" PointX="11.25" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="schoolDBModel.FK__Schools__Area_Co__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Certifica__Certi__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Certifica__Certi__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Certifica__Class__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Certifica__Code___5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Students__City_C__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Class_Beh__Behav__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Class_Beh__Class__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Class_Beh__Code___693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Students__Class___286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Subjects___Class__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Teachers___Class__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Subjects___Educa__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Exams_For__Code___4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Exams_For__ID_St__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Exams_For__Tests__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Subjects___Semes__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Student_G__Code___619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Student_G__ID_St__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Tests_For__ID_St__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Subjects___Subje__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Subjects___ID_Te__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Tests__Code_Subj__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Tests_For__Code___46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Teachers___ID_Te__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolDBModel.FK__Tests_For__Tests__47DBAE45" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -50,8 +50,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AreasDTO.cs" />
+    <Compile Include="CertificateDTO.cs" />
+    <Compile Include="Certificates_For_SchoolDTO.cs" />
+    <Compile Include="CityDTO.cs" />
+    <Compile Include="ClassDTO.cs" />
+    <Compile Include="Class_BehaviorsDTO.cs" />
+    <Compile Include="Class_Behaviors_And_ActionsDTO.cs" />
+    <Compile Include="Educational_LevelDTO.cs" />
+    <Compile Include="Exams_For_StudentsDTO.cs" />
+    <Compile Include="Grade_Categories_For_SchoolDTO.cs" />
+    <Compile Include="InstitutionDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolDTO.cs" />
+    <Compile Include="SemesterDTO.cs" />
+    <Compile Include="StudentDTO.cs" />
+    <Compile Include="Student_Grade_ScoreDTO.cs" />
+    <Compile Include="SubjectDTO.cs" />
+    <Compile Include="Subjects_For_ClassesDTO.cs" />
+    <Compile Include="TeacherDTO.cs" />
+    <Compile Include="Teachers_For_ClassesDTO.cs" />
+    <Compile Include="TestDTO.cs" />
+    <Compile Include="Tests_For_StudentDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dal\Dal.csproj">

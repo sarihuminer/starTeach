@@ -1,0 +1,15 @@
+D:\Users\user\Desktop\starTeach\WebApi\DTO\bin\Debug\DTO.dll.config
+D:\Users\user\Desktop\starTeach\WebApi\DTO\bin\Debug\DTO.dll
+D:\Users\user\Desktop\starTeach\WebApi\DTO\bin\Debug\DTO.pdb
+D:\Users\user\Desktop\starTeach\WebApi\DTO\bin\Debug\Dal.dll
+D:\Users\user\Desktop\starTeach\WebApi\DTO\bin\Debug\EntityFramework.dll
+D:\Users\user\Desktop\starTeach\WebApi\DTO\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\user\Desktop\starTeach\WebApi\DTO\bin\Debug\Dal.pdb
+D:\Users\user\Desktop\starTeach\WebApi\DTO\bin\Debug\Dal.dll.config
+D:\Users\user\Desktop\starTeach\WebApi\DTO\bin\Debug\EntityFramework.xml
+D:\Users\user\Desktop\starTeach\WebApi\DTO\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\user\Desktop\starTeach\WebApi\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Users\user\Desktop\starTeach\WebApi\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Users\user\Desktop\starTeach\WebApi\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\Users\user\Desktop\starTeach\WebApi\DTO\obj\Debug\DTO.dll
+D:\Users\user\Desktop\starTeach\WebApi\DTO\obj\Debug\DTO.pdb
