@@ -4,7 +4,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/user';
 import { StudentComponent } from '../compnents/student/student.component';
-import { Student } from '../model/student';
 import { UpdateUserService } from '../service/update-user.service';
 import { UserService } from '../service/user.service';
 //import { User } from '../model/user';

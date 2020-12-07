@@ -21,7 +21,8 @@ namespace Dal
             this.Student_Grade_Score = new HashSet<Student_Grade_Score>();
             this.Tests_For_Student = new HashSet<Tests_For_Student>();
         }
-    
+
+    //codeMosad: number;
         public int Serial_Num { get; set; }
         public int ID_Student { get; set; }
         public string First_Name { get; set; }
