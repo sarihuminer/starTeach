@@ -17,13 +17,6 @@ const routes: Routes = [
  { path:"", redirectTo: 'login', pathMatch: 'full' },
  { path: 'login', component: LoginComponent},
   {path: 'user', component:UserComponent,
-
-// const routes: Routes = [
-//   { path: "", redirectTo: 'login', pathMatch: 'full' },
-//   { path: 'login', component: LoginComponent },
-//   {
-//     path: 'user', component: UserComponent,
-// >>>>>>> b502fa67aedc549e2c0e7a35e524c4ff2bb61754
     children: [
       { path: 'diploma', component: DiplomaComponent },
       { path: 'students', component: StudentComponent },

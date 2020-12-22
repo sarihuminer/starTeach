@@ -18,7 +18,7 @@ export class UpdateDetailsComponent implements OnInit {
   dochSearchForm: FormGroup;
   updateU: string;
 
-  constructor(private route: ActivatedRoute, private userService: UserService, private fb: FormBuilder, private updateUserService: UpdateUserService
+  constructor(private route: ActivatedRoute,private router:Router, private userService: UserService, private fb: FormBuilder, private updateUserService: UpdateUserService
   ) {
     
     this.getUserToUpdate();
@@ -31,9 +31,9 @@ export class UpdateDetailsComponent implements OnInit {
     this.dochSearchForm = this.fb.group(this.userToUpdate);//create a object of the row you want to update.
     this.dochSearchForm.get('id').setValidators([Validators.required,Validators.pattern(/^\d{9,9}?$/)]);
     this.dochSearchForm.get('id').updateValueAndValidity();
-    this.dochSearchForm.get('firstName').setValidators([Validators.required,Validators.pattern(/^\u0590-\u05FF/)]);
+    this.dochSearchForm.get('firstName').setValidators([Validators.required,Validators.pattern(/[\u0590-\u05FF]/)]);
     this.dochSearchForm.get('firstName').updateValueAndValidity();
-    this.dochSearchForm.get('lastName').setValidators([Validators.required,Validators.pattern(/^\u0590-\u05FF/)]);
+    this.dochSearchForm.get('lastName').setValidators([Validators.required,Validators.pattern(/[\u0590-\u05FF]/)]);
     this.dochSearchForm.get('lastName').updateValueAndValidity();
     this.dochSearchForm.get('codeMosad').setValidators([Validators.required,Validators.pattern(/^\d/)]);
     this.dochSearchForm.get('codeMosad').updateValueAndValidity();
@@ -58,6 +58,7 @@ export class UpdateDetailsComponent implements OnInit {
       let updatingUser: User;
       updatingUser = this.dochSearchForm.value;
       this.updateUserService.changeData(updatingUser);//move the update object to the update-user-service
+      this.router.navigate(['user/students'])
     }
   }
   InitForm() {

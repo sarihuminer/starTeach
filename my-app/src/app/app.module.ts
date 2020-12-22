@@ -22,13 +22,6 @@ import { UpdateDetailsComponent } from './update-details/update-details.componen
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader/src/http-loader';
 import { Http } from '@angular/http';
-//  export function HttpLoaderFactory(http: Http) {
-//    return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
-// }
-//>>>>>>> b502fa67aedc549e2c0e7a35e524c4ff2bb61754
-//  export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateHttpLoader {
-//   // return new TranslateHttpLoader(new HttpClient(httpBackend));
-// }
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,13 +44,6 @@ UpdateDetailsComponent
     ChartsModule,
     CommonModule,
     BrowserModule,
-  //    TranslateModule.forRoot({
-  //      loader: {
-  //          provide: TranslateLoader,
-  //          deps: [HttpClient],
-  //          useFactory: translateHttpLoaderFactory
-  //      }
-  // }),
     ReactiveFormsModule ,
  
   ],

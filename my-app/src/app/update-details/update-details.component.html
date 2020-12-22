@@ -1,13 +1,23 @@
-<form [formGroup]="dochSearchForm" (ngSubmit)="onSubmit()">
-    <div class="row">
-        <div class="col-lg-3" style="margin-left: 30%;">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+    <div id="formFooter">
+       <b> <p style="font-size: 25px;font-family: 'Courier New', Courier;">Update Details</p></b>
+      </div>
+    <div class="fadeIn first"><br><br>
+  <form style="margin-left: 20%;" [formGroup]="dochSearchForm" (ngSubmit)="onSubmit()">
+    <div class="container"> 
+     <div class="row">
+        <div class="col-lg-9" > 
     <div class="form-group" >
-        <label  for="id" name="id">Id</label>
+        <label  for="id" name="id">Id</label><br>
         <input  name="id"  formControlName="id"  class="form-control"   [ngClass]="{ 'field-error': !dochSearchForm.get('id').valid }"/>
         <span class="error-text" *ngIf="dochSearchForm.get('id').hasError('required')">Invalid input</span>
          <span class="error-text" *ngIf="dochSearchForm.get('id').hasError('pattern')">Put must 9 Numbers!</span>  
     </div>
-
     <div class="form-group">
         <label for="firstName" name="FirstName">FirstName</label>
         <input type="text" formControlName="firstName"  formControlName="firstName"  name="firstName" class="form-control" [ngClass]="{ 'field-error': !dochSearchForm.get('firstName').valid }" >
@@ -44,10 +54,18 @@
         <span class="error-text" *ngIf="dochSearchForm.get('password').hasError('required')">Invalid input</span> 
     </div>
     <div class="form-group form-check">
-        <input formControlName="codeMosad"  type="checkbox" class="form-check-input" id="exampleCheck1">
+        <input formControlName="Check"  type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
+<div>
+    <button  style="margin-left:7% ;" type="submit" class="btn btn-primary">Submit</button>
+</div>
+     </div>
+    </div>
+</div>
+</form><br>
+<div id="formFooter">
+  </div>
+  </div>
 </div>
 </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
